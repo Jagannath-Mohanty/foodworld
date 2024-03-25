@@ -1,0 +1,80 @@
+ .main-body {
+  position: relative;
+  text-align: center;
+  display: flex;
+  height: 34vw;
+  background-size: contain;
+  justify-content:center;
+  margin-top: 50px;
+}
+
+.background-image {
+  width: 100%;
+  height: 525px;
+  z-index: -1; 
+}
+/* 
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(237, 38, 31);
+  background-color: rgb(215, 116, 10);
+  border-radius: 10px;
+  box-shadow: 10px black;
+  width: 400px;
+  height: 250px;
+  font-size: 20px;
+  font-weight: bold;
+} */
+ 
+.welcome {
+  font-size: 2em;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.input-field{
+  width: 300px;
+  height: 28px;
+  padding: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(144, 140, 140);
+  border: 1px solid gray;
+  box-sizing: 3px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+.login-submit button{
+   border: none;
+   color: darkorange;
+   padding: 5px 15px;
+   text-align: center;
+   font-size: 15px;
+   font-weight: bold;
+   margin: 4px 2px ;
+   cursor: pointer;
+   box-shadow: 2px 2px 2px 2px rgb(144, 140, 140);
+   margin-top: 15px;
+
+
+} 
+.login-link
+  {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  .login-link:hover {
+    text-decoration: underline;
+  }

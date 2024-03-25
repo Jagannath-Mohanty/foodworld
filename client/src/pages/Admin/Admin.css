@@ -1,0 +1,265 @@
+/* 
+.user-table {
+    width: 249%;
+    border-collapse: collapse;
+    
+    
+  }
+  
+  .user-table th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+   
+  }
+  
+ 
+  .user-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  
+  }
+  
+  .user-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  
+ 
+  .user-table td {
+    
+    padding: 10px;
+  }
+  
+  
+  .centered-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+ 
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+      margin-top: 9px;
+      margin-left: 20px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 4px;
+    margin-top: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+   */
+
+
+   .user-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100vw;
+    overflow: scroll;
+  }
+  
+  .user-table td, .user-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    
+  }
+  
+  .user-table tr:nth-child(even){background-color: #aaa8a8;}
+  
+  .user-table tr:hover {
+    background-color: #434241;
+    color: white;
+  }
+  
+  .user-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(116, 49, 18);
+    color: white;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+      margin-top: 9px;
+      margin-left: 20px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 4px;
+    margin-top: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  /* a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  } */
+  .container .admin-button{
+    
+      background: transparent;
+      font-size: 10px;
+      color: #eceef4;
+      border: 1px solid rgb(255, 89, 60);
+      padding:10px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: tomato;
+      float: right;
+      margin-right: 40px;
+      margin-bottom: 10px;
+    }
+    .container .admin-button:hover{
+      background-color: #fff4f2;
+      color: black;
+      
+    }
+    .admin-reject{
+      /* display: flex;  */
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      
+    }
+    .admin-reject a{
+      border: none;
+   color: darkorange;
+   padding: 5px 15px;
+   text-align: center;
+   font-size: 15px;
+   font-weight: bold;
+   margin: 4px 2px ;
+   cursor: pointer;
+   box-shadow: 2px 2px 2px 2px rgb(144, 140, 140);
+   margin-top: 15px;
+justify-content: center;
+margin-top: 20px;
+
+    }
+  

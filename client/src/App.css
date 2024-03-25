@@ -1,0 +1,274 @@
+/* .main-body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93vh;
+  background-color:#5b5957;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff8f8; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  height: 580px;
+  max-width: 400px;
+  margin:0 auto;
+
+  background-image: url("https://www.tripsavvy.com/thmb/Cmlit70G0sDR7AcC3qkA0vcZocY=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/ConnemaraNationalPark-5b0e73cc8023b90036079546.jpg");
+}
+.containerdata{
+  overflow: scroll;
+}
+.containerdata::-webkit-scrollbar {
+  display: none;
+}
+.container span {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 20px;
+  margin-top: 0px;
+ 
+  
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: calc(70% - 30px);
+  padding: 8px;
+  padding-left: 80px;
+ 
+  border:none;
+  border-bottom: 1px solid #ccc;
+ 
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+   background-position: 10px center;
+  background-size: 20px 20px;
+  display: block;
+  margin: 0 auto; 
+  box-shadow: #252627 2px 2px 3px 3px;
+} 
+
+.form-group input[name="name"] {
+
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTHyh-cy7l596itqu9bgVP0pAdQ7N7CXfMa-o84wBC4g&s');
+}
+
+.form-group input[name="email"] {
+ 
+  background-image: url('data:image/png;base64,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');
+
+}
+
+.form-group input[name="mobile"] {
+ 
+  background-image: url('https://cdn2.iconfinder.com/data/icons/font-awesome/1792/phone-512.png');
+
+}
+
+.form-group input[name="profession"] {
+ 
+  background-image: url('data:image/png;base64,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');
+
+}
+
+.form-group input[name="password"],
+.form-group input[name="confirm-password"] {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/61/61457.png');
+}
+
+.form-group button {
+  padding: 10px 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block; 
+  margin: 0 auto;
+  float: right;
+
+}
+
+.form-group button:hover {
+  background-color: #0056b3;
+}
+.collapse {
+  background-color: #5b5957;
+}
+.nav-item{
+  color: white
+}
+.home-div{
+  display: flex;
+  flex-direction: column;
+  
+  background-image: url("https://peakvisor.com/img/news/Ireland-Connemara-National-Park.jpg");
+}
+.homebody {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5eded;
+}
+
+.container2 {
+  width: 600px; 
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  height: 500px;
+}
+
+form {
+  display: inline-block;
+  width: 50%; 
+  vertical-align: top; 
+}
+
+img {
+  float: right;
+  width: 100%;
+  height: 500px;
+  margin-left: 80px;
+}
+.container2 span {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #007bff;
+}
+ button {
+  padding: 10px 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 80px;
+  display: block; 
+  margin: 0 auto;
+  margin-top: 20;
+}
+ input {
+  width: calc(40% - 30px);
+  padding: 8px;
+  padding-left: 80px;
+  
+  border:none;
+  border-bottom: 1px solid #ccc;
+
+  border-radius: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+   background-position: 10px center;
+  background-size: 20px 20px;
+  display: block;
+  margin: 0 auto; 
+} 
+.form-group-login button {
+  padding: 10px 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 80px;
+  display: block; 
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.collapse navbar-collapse{
+  float: right;
+}
+.collapse-navbar-collapse{
+  float: right;
+}
+
+
+h1{
+  text-align:center;
+  color: #feeded;
+}
+p{
+  text-align: center;
+  margin-top: 20px;
+  color: #feeded;
+}
+
+.links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.links span {
+  margin: 0 10px;
+  color: #feeded;
+  font-size: 18px;
+}
+.nav-link{
+  font-size: 20px;
+  color: black;
+}
+
+.roletype{
+  margin-left: 120px;
+  color: #f5eded;
+}
+span{
+  font-size: 15px;
+  font-weight: bold;
+}
+.sr-only:hover{
+  color: rgb(233, 30, 20);
+}
+.welcome{
+  font-size: 40px;
+  font-weight: bold;
+}
+.slink{
+  color: #4782c1;
+}
+p{
+  color: rgb(252, 46, 46);
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.delete_button{
+  color: darkorange;
+}
+
+.centered-text {
+  text-align: center;
+  color: red;
+  font-size: 40px;
+} */
