@@ -1,6 +1,19 @@
 .cart-file{
     margin-top: 100px;
-    
+}
+.cart-restaurant-banner{
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+}
+.cart-empty{
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--color-text-muted);
+    font-size: 1rem;
 }
 .cart-items-title{
     display: grid;
@@ -62,4 +75,169 @@
 }
 .cart-total{
     margin: 10px 0px;
+}
+.cart-payment-methods{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.cart-payment-label{
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+.cart-payment-option{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 0.92rem;
+    color: var(--color-text);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.cart-payment-option:hover{
+    border-color: var(--color-primary);
+}
+.cart-payment-option input{
+    accent-color: var(--color-primary);
+}
+.place-order-button:disabled{
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+.cart-coupon{
+    margin-bottom: 16px;
+}
+.cart-coupon-row{
+    display: flex;
+    gap: 8px;
+}
+.cart-coupon-row input{
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-alt);
+    font-size: 0.9rem;
+    outline: none;
+    text-transform: uppercase;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.cart-coupon-row input:focus{
+    border-color: var(--color-primary);
+    background-color: var(--color-bg);
+    box-shadow: 0 0 0 3px rgba(255, 89, 60, 0.15);
+}
+.cart-coupon-row button{
+    padding: 0 18px;
+    background-color: var(--color-text);
+    color: var(--color-text-inverse);
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.cart-coupon-row button:hover:not(:disabled){
+    background-color: #000;
+}
+.cart-coupon-row button:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.cart-coupon-error{
+    color: var(--color-error);
+    font-size: 0.82rem;
+    margin-top: 6px;
+}
+.cart-coupon-applied{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background-color: rgba(22, 163, 74, 0.12);
+    color: #166534;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+}
+.cart-coupon-applied button{
+    background: transparent;
+    border: none;
+    color: var(--color-error);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+.cart-discount-row p{
+    color: #166534;
+    font-weight: 600;
+}
+/* ===== Online payment modal ===== */
+.pay-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+.pay-modal {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  padding: 22px;
+  animation: fadeIn 0.18s ease;
+}
+.pay-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pay-modal-head h3 { font-size: 1.15rem; font-weight: 600; color: #1f2937; }
+.pay-modal-close {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  color: #6b7280;
+  cursor: pointer;
+  display: inline-flex;
+}
+.pay-modal-amount { color: #6b7280; font-size: 0.9rem; margin: 4px 0 16px; }
+
+.pay-options { display: flex; flex-direction: column; gap: 10px; }
+.pay-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  text-align: left;
+}
+.pay-option:hover:not(:disabled) {
+  border-color: #ff593c;
+  box-shadow: 0 2px 10px rgba(255, 89, 60, 0.12);
+}
+.pay-option:disabled { opacity: 0.6; cursor: not-allowed; }
+.pay-option-icon { font-size: 1.7rem; display: inline-flex; flex-shrink: 0; }
+.pay-option-label { flex: 1; font-size: 0.98rem; font-weight: 500; color: #1f2937; }
+.pay-option-arrow { color: #9ca3af; font-size: 1.4rem; }
+
+.pay-modal-note {
+  margin-top: 16px;
+  font-size: 0.78rem;
+  color: #9ca3af;
+  text-align: center;
 }

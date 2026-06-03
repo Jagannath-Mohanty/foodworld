@@ -2,11 +2,9 @@ import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { config } from "dotenv";
-import Order from "../model/Order.js";
 
 config({ path: "./config.env" });
 const { hash } = bcrypt;
-const { sign } = jwt;
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -35,10 +33,12 @@ const userSchema = new mongoose.Schema({
   ],
   role: {
     type: String,
+    enum: ["user", "restaurant", "delivery", "admin"],
+    default: "admin",
   },
   orders: [
     {
-      type: [],
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Order",
     },
   ],
@@ -63,5 +63,5 @@ userSchema.methods.generateAuthToken = function () {
   }
 };
 
-const Customers = mongoose.model("Customers", userSchema);
-export default Customers;
+const Users = mongoose.model("Users", userSchema);
+export default Users;

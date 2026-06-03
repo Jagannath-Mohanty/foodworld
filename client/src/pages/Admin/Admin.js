@@ -18,7 +18,7 @@ const Admin = () => {
         throw new Error("Token not found in localStorage");
       }
 
-      const response = await fetch("/admin", {
+      const response = await fetch("/api/admin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const Admin = () => {
     console.log("User========Id   ", userId);
     try {
       const user_id = userId;
-      const response = await fetch("/make-admin", {
+      const response = await fetch("/api/make-admin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

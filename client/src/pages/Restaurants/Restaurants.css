@@ -1,0 +1,117 @@
+.restaurants-page {
+  padding: 32px 0 64px;
+}
+
+.restaurants-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.restaurants-header p {
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}
+
+/* ===== Toolbar ===== */
+.restaurants-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.restaurants-search {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.restaurants-search:focus-within {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg);
+  box-shadow: 0 0 0 3px rgba(255, 89, 60, 0.15);
+}
+
+.restaurants-search-icon {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.restaurants-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 0;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.restaurants-veg-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.restaurants-veg-toggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.restaurants-veg-toggle input {
+  accent-color: #166534;
+  cursor: pointer;
+}
+
+/* ===== Grid ===== */
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* ===== States ===== */
+.restaurants-loading,
+.restaurants-empty {
+  padding: 48px 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.restaurants-error {
+  background-color: var(--color-error-bg);
+  color: var(--color-error);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .restaurants-page {
+    padding: 20px 0 48px;
+  }
+  .restaurants-header h1 {
+    font-size: 1.6rem;
+  }
+}

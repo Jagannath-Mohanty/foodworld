@@ -12,3 +12,9 @@
     gap: 30px;
     row-gap: 50px;
 }
+.food-display-state{
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    color: var(--color-text-muted, #6b7280);
+}

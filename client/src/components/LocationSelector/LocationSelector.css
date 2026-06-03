@@ -1,0 +1,205 @@
+.loc-selector {
+  position: relative;
+}
+
+/* ===== Trigger ===== */
+.loc-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+  cursor: pointer;
+  color: var(--color-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  max-width: 240px;
+}
+
+.loc-trigger:hover {
+  border-color: var(--color-primary);
+}
+
+.loc-trigger-icon {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.loc-trigger-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+  min-width: 0;
+}
+
+.loc-trigger-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.loc-trigger-value {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+
+.loc-trigger-caret {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  transition: transform 0.2s ease;
+}
+
+.loc-trigger-caret.open {
+  transform: rotate(180deg);
+}
+
+/* ===== Popover ===== */
+.loc-pop {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 50;
+  width: 320px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 18px;
+  animation: fadeIn 0.18s ease;
+}
+
+.loc-pop-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.loc-pop-close:hover {
+  background-color: var(--color-bg-alt);
+}
+
+.loc-detect-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 6px;
+}
+
+.loc-detect-btn:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+}
+
+.loc-detect-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loc-error {
+  margin-top: 10px;
+  padding: 8px 10px;
+  background-color: var(--color-error-bg);
+  color: var(--color-error);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+}
+
+.loc-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+}
+
+.loc-divider::before,
+.loc-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+.loc-manual-form {
+  display: flex;
+  gap: 8px;
+}
+
+.loc-manual-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-alt);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.loc-manual-form input:focus {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg);
+  box-shadow: 0 0 0 3px rgba(255, 89, 60, 0.15);
+}
+
+.loc-manual-submit {
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--color-text);
+  color: var(--color-text-inverse);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.loc-manual-submit:hover {
+  background-color: #000;
+}
+
+@media (max-width: 640px) {
+  .loc-trigger-text {
+    display: none;
+  }
+  .loc-trigger {
+    padding: 8px 10px;
+  }
+  .loc-pop {
+    width: 280px;
+    left: auto;
+    right: 0;
+  }
+}

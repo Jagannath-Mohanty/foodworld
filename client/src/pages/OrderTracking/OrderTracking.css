@@ -1,0 +1,243 @@
+.ot-page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 32px 0 64px;
+}
+
+.ot-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.ot-order-id {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Cards ===== */
+.ot-timeline-card,
+.ot-map-card,
+.ot-summary-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+}
+
+.ot-timeline-card h2,
+.ot-map-card h2,
+.ot-summary-card h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+/* ===== Timeline ===== */
+.ot-timeline {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 2px;
+}
+
+.ot-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px 0;
+  position: relative;
+}
+
+.ot-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 38px;
+  bottom: -6px;
+  width: 2px;
+  background-color: var(--color-border);
+}
+
+.ot-step-done:not(:last-child)::after {
+  background-color: #16a34a;
+}
+
+.ot-step-bullet {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border: 2px solid var(--color-border);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.ot-step-done .ot-step-bullet {
+  background-color: #16a34a;
+  color: #fff;
+  border-color: #16a34a;
+}
+
+.ot-step-active .ot-step-bullet {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 89, 60, 0.55); }
+  50%      { box-shadow: 0 0 0 8px rgba(255, 89, 60, 0); }
+}
+
+.ot-step-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.ot-step-done .ot-step-label,
+.ot-step:not(.ot-step-active):not(.ot-step-done) .ot-step-label {
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.ot-step-active .ot-step-label {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.ot-step-time {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 2px;
+}
+
+.ot-cancelled {
+  padding: 12px 14px;
+  background-color: var(--color-error-bg);
+  color: var(--color-error);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+}
+
+/* ===== Map ===== */
+.ot-map {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+/* ===== Summary ===== */
+.ot-summary-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.ot-summary-line strong {
+  color: var(--color-text);
+}
+
+.ot-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+  padding-top: 12px;
+  border-top: 1px dashed var(--color-border);
+}
+
+.ot-items li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.ot-totals {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px dashed var(--color-border);
+  padding-top: 12px;
+}
+
+.ot-totals > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.ot-total-row {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: var(--color-text) !important;
+  border-top: 1px solid var(--color-border);
+  padding-top: 8px;
+  margin-top: 4px;
+}
+
+.ot-payment {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.ot-payment-status {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 4px;
+}
+
+.ot-payment-pending { background-color: rgba(255, 183, 3, 0.18); color: #b45309; }
+.ot-payment-paid    { background-color: rgba(22, 163, 74, 0.15); color: #166534; }
+.ot-payment-failed  { background-color: var(--color-error-bg); color: var(--color-error); }
+.ot-payment-refunded{ background-color: var(--color-bg-alt); color: var(--color-text-muted); }
+
+/* ===== States ===== */
+.ot-state {
+  padding: 64px 0;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.ot-state-error {
+  color: var(--color-error);
+}
+
+.ot-rated {
+  padding: 14px 18px;
+  background-color: rgba(22, 163, 74, 0.12);
+  color: #166534;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  text-align: center;
+}

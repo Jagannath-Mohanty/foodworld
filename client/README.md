@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# FoodWorld Customer App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The customer app is the public-facing FoodWorld experience. It lets users browse restaurants and dishes, manage a cart, place orders, track delivery live, and leave ratings.
 
-## Available Scripts
+## What it does
 
-In the project directory, you can run:
+- Browse the home page, featured restaurants, and food categories.
+- Search restaurants, menu items, and categories.
+- View restaurant details and restaurant menus.
+- Add and remove items from the cart.
+- Apply coupons and place orders.
+- Track orders on a live map.
+- Leave a review after delivery.
+- View customer-facing notifications and toasts.
 
-### `npm start`
+## Platform and stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Frontend: React 18 with Create React App
+- Routing: React Router v6
+- Styling: CSS modules/files plus custom global CSS
+- State: React context for cart, location, and notifications
+- Maps: Leaflet and React Leaflet
+- Live updates: Socket.IO client
+- Icons: React Icons
+- Networking: browser `fetch`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Main pages
 
-### `npm test`
+- `/` home page
+- `/restaurants` restaurant listing
+- `/restaurants/:id` restaurant details
+- `/search` global search page
+- `/cart` shopping cart
+- `/order` checkout and order placement
+- `/orders/:id` live order tracking
+- `/login` and `/signup`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Key features
 
-### `npm run build`
+- Restaurant listing with search, veg-only filter, location filtering, and pagination
+- Search results that group dishes by category
+- Cart conflict handling when items from different restaurants are added
+- Coupon application during checkout
+- Live order status updates over sockets
+- Customer notifications for order placement and status changes
+- Delivery tracking on a map for active orders
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Backend integration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Uses the shared backend at `http://localhost:5000`
+- Public API paths are exposed under `/api`
+- Important endpoints include:
+  - `/api/restaurants`
+  - `/api/items`
+  - `/api/search`
+  - `/api/coupons/apply`
+  - `/api/customer/placeorder`
+  - `/api/orders/:id`
+  - `/api/payment/create-order`
+  - `/api/payment/verify`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Local run
 
-### `npm run eject`
+- Start backend: `npm start` inside `server`
+- Start customer app: `npm start` inside `client`
+- Customer app dev port: `5002`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

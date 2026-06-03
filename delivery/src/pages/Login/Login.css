@@ -1,0 +1,141 @@
+.al-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 89, 60, 0.12), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(255, 183, 3, 0.10), transparent 50%),
+    var(--color-bg-app);
+}
+
+.al-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 36px 32px;
+  animation: fadeIn 0.4s ease;
+}
+
+.al-head { text-align: center; margin-bottom: 24px; }
+
+.al-logo {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.al-head h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.al-head p {
+  margin-top: 6px;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+}
+
+.al-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.al-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.al-field > span {
+  font-size: 0.82rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.al-input-wrap {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.al-input-wrap:focus-within {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg);
+  box-shadow: 0 0 0 3px rgba(255, 89, 60, 0.15);
+}
+
+.al-input-icon {
+  margin-left: 12px;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.al-input-wrap input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 11px 12px;
+  font-size: 0.92rem;
+  color: var(--color-text);
+}
+
+.al-submit-btn {
+  margin-top: 6px;
+  padding: 11px 16px;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.al-submit-btn:hover:not(:disabled) { background-color: var(--color-primary-dark); }
+.al-submit-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+/* ===== OTP step extras ===== */
+.al-otp-input input {
+  letter-spacing: 0.4em;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.al-link-btn {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+}
+.al-link-btn:hover { color: var(--color-primary-dark); text-decoration: underline; }
+
+.al-login-foot {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}

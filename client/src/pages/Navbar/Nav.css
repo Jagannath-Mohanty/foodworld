@@ -1,71 +1,127 @@
-.navbar{
-  padding: 20px 0px;
+.navbar {
+  padding: 18px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
+  gap: 24px;
 }
-.navbar .logo{
-  width:150px;
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
-.navbar-menu{
+
+.zomato-logo {
+  width: 150px;
+  object-fit: contain;
+}
+
+.navbar-menu {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 32px;
   color: #49557e;
   font-size: 18px;
+  font-weight: 500;
 }
-.navbar-right{
-display: flex;
-align-items: center;
-gap: 40px;
+
+.navbar-menu a {
+  cursor: pointer;
+  padding-bottom: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 2px solid transparent;
 }
-.navbar button{
+
+.navbar-menu a:hover {
+  color: rgb(255, 89, 60);
+}
+
+.navbar .active {
+  color: rgb(255, 89, 60);
+  border-bottom: 2px solid rgb(255, 89, 60);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar-right a {
+  display: inline-flex;
+  align-items: center;
+  color: #49557e;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-right a:hover {
+  color: rgb(255, 89, 60);
+  transform: translateY(-2px);
+}
+
+.navbar-right .admin,
+.navbar-right .cart,
+.navbar-right .user {
+  font-size: 32px;
+}
+
+.cart-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.add-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(243, 80, 52);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 999px;
+  line-height: 1;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+.navbar button {
   background: transparent;
   font-size: 16px;
   color: #49557e;
   border: 1px solid rgb(255, 89, 60);
-  padding:10px 30px;
+  padding: 10px 28px;
   border-radius: 50px;
   cursor: pointer;
-  transition: 0.3s;
-}
-.navbar button:hover{
-  background-color: #fff4f2;
-}
-.navbar .active{
-  padding-bottom: 2px;
-  padding-bottom: 2px solid #49557e;
-}
-.navbar-search-icon {
-  position: relative;
-}
-.navbar-search-icon .dot{
-   position: absolute;
-   min-width: 10px;
-   min-height: 10px;
-   background-color: rgb(243, 80, 52);
-   border-radius: 5px;
-   top:-8px;
-   right: -8px;
-}
-.navbar-right .icon{
-  height: 20px;
-  width: 40px;
-  color: aliceblue;
-}
-.zomato-logo{
-  width: 150px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.add-count {
-  position: relative;
-  /* display: inline-block; */
-  width: 1.5em; 
-  height: 1.5em; 
-  line-height: 1.5em; 
-  text-align: center; 
-  color: rgb(240, 229, 229);
-  background-color: red;
-  border-radius: 50%; 
-  font-size: 0.5em; 
+.navbar button:hover {
+  background-color: rgb(255, 89, 60);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    gap: 18px;
+    font-size: 16px;
+  }
+  .navbar-right {
+    gap: 20px;
+  }
+  .navbar-right .admin,
+  .navbar-right .cart,
+  .navbar-right .user {
+    font-size: 26px;
+  }
+  .zomato-logo {
+    width: 110px;
+  }
 }

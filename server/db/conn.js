@@ -12,9 +12,13 @@
 
 import mongoose from "mongoose";
 
+
+// const databaseURL = "mongodb://localhost:27017/test";
+const databaseURL = process.env.MONGODB_URL;
+
 export default async function connectToDatabase() {
   try {
-    await mongoose.connect("mongodb://localhost:27017/test");
+    await mongoose.connect(databaseURL);
     console.log("Connection Successful");
   } catch (error) {
     console.error("Connection Error:", error);

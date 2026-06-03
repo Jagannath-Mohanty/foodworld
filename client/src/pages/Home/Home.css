@@ -1,0 +1,33 @@
+.home-restaurants {
+  padding: 48px 0 16px;
+}
+
+.home-restaurants-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.home-restaurants-head h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.home-restaurants-link {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.home-restaurants-link:hover {
+  color: var(--color-primary-dark);
+}
+
+.home-restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}

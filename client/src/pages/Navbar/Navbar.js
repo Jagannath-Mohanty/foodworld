@@ -6,6 +6,8 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { MdShoppingCart } from "react-icons/md";
 import { MdAdminPanelSettings } from "react-icons/md";
 import { StoreContext } from "../../context/StoreContext";
+import LocationSelector from "../../components/LocationSelector/LocationSelector";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 const Navbar = () => {
   const { getTotalCartItem } = useContext(StoreContext);
@@ -24,18 +26,21 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      {/* <img src={assets.Zomato-Logo} alt="" className="logo" /> */}
-      <img
-        src="https://logos-world.net/wp-content/uploads/2020/12/Zomato-Logo.jpg"
-        alt=""
-        className="zomato-logo"
-      />
+      <div className="navbar-left">
+        <img
+          src="https://logos-world.net/wp-content/uploads/2020/12/Zomato-Logo.jpg"
+          alt=""
+          className="zomato-logo"
+        />
+        <LocationSelector />
+      </div>
+      <SearchBar />
       <ul className="navbar-menu">
         <Link to="/" className="active">
           Home
         </Link>
-        <a href="#explore-menu">Menu</a>
-        <Link to="/contact-us">contact us</Link>
+        <Link to="/restaurants">Restaurants</Link>
+        <Link to="/contact-us">Contact</Link>
       </ul>
       <div className="navbar-right">
         <div className="icons">

@@ -12,6 +12,12 @@ import Cart from "./pages/Cart/Cart";
 import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import AddItem from "./pages/Additem/Additem";
 import ItemDetails from "./pages/ItemDetails/ItemDetails";
+import Restaurants from "./pages/Restaurants/Restaurants";
+import Search from "./pages/Search/Search";
+import Toasts from "./components/Toasts/Toasts";
+import RestaurantDetails from "./pages/RestaurantDetails/RestaurantDetails";
+import DeliveryDashboard from "./pages/DeliveryDashboard/DeliveryDashboard";
+import OrderTracking from "./pages/OrderTracking/OrderTracking";
 
 const App = () => {
   return (
@@ -28,7 +34,13 @@ const App = () => {
         <Route path="/order" element={<PlaceOrder />} />
         <Route path="/additem" element={<AddItem />} />
         <Route path="/item-details/:id" element={<ItemDetails />} />
+        <Route path="/restaurants" element={<Restaurants />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/restaurants/:id" element={<RestaurantDetails />} />
+        <Route path="/delivery" element={<DeliveryDashboard />} />
+        <Route path="/orders/:id" element={<OrderTracking />} />
       </Routes>
+      <Toasts />
     </div>
   );
 };

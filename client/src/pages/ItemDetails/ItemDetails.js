@@ -43,7 +43,7 @@ const ItemDetails = () => {
     }
 
     navigate("/cart");
-    const response = fetch("/rating", {
+    const response = fetch("/api/rating", {
       method: "POST",
       headers: {
         "content-type": "application/json",

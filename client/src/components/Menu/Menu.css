@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    min-height: 100vh;
+    padding: 40px 10vw;
+    justify-content: center;
 }
 .explore-menu h1{
     color: #262626;

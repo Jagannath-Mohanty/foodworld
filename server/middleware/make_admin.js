@@ -1,4 +1,4 @@
-import Customers from "../model/userSchema.js";
+import Users from "../model/userSchema.js";
 
 const MakeAdmin = async (req, res, next) => {
   try {
@@ -9,7 +9,7 @@ const MakeAdmin = async (req, res, next) => {
 
     try {
       if (category === true) {
-        const user = await Customers.findByIdAndUpdate(user_id, {
+        const user = await Users.findByIdAndUpdate(user_id, {
           role: "user",
         });
         if (!user) {
@@ -17,7 +17,7 @@ const MakeAdmin = async (req, res, next) => {
         }
         res.sendStatus(200);
       } else if (category === false) {
-        const user = await Customers.findByIdAndUpdate(user_id, {
+        const user = await Users.findByIdAndUpdate(user_id, {
           role: "admin",
         });
         if (!user) {

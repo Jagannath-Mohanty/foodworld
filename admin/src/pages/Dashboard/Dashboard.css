@@ -1,0 +1,113 @@
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.stat-card-success .stat-icon { background-color: var(--color-success-bg); color: var(--color-success); }
+.stat-card-warning .stat-icon { background-color: var(--color-warning-bg); color: var(--color-warning); }
+.stat-card-info .stat-icon    { background-color: rgba(56, 189, 248, 0.18); color: #0284c7; }
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.dash-row-2 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 18px;
+  margin-top: 22px;
+}
+@media (max-width: 900px) { .dash-row-2 { grid-template-columns: 1fr; } }
+
+.dash-top-list,
+.dash-status-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dash-top-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed var(--color-border);
+}
+.dash-top-list li:last-child { border-bottom: none; }
+
+.dash-rank {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.dash-top-name {
+  flex: 1;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.dash-top-amt {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.dash-status-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed var(--color-border);
+}
+.dash-status-list li:last-child { border-bottom: none; }
+
+.dash-status-count {
+  font-weight: 700;
+  color: var(--color-text);
+}

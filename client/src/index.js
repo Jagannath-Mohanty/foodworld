@@ -12,6 +12,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import StoreContextProvider from "./context/StoreContext";
+import LocationContextProvider from "./context/LocationContext";
+import NotificationContextProvider from "./context/NotificationContext";
 const router = createBrowserRouter(
   createRoutesFromElements(<Route path="/" element={<App />}></Route>)
 );
@@ -19,9 +21,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <StoreContextProvider>
-        <App />
-      </StoreContextProvider>
+      <LocationContextProvider>
+        <StoreContextProvider>
+          <NotificationContextProvider>
+            <App />
+          </NotificationContextProvider>
+        </StoreContextProvider>
+      </LocationContextProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
