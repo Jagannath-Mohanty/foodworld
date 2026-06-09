@@ -5,6 +5,9 @@ node_modules/
 .env
 .env.*
 server/.env
+# ...but keep example templates
+!.env.example
+!**/.env.example
 
 # Build folders
 build/

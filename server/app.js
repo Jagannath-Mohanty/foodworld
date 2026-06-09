@@ -14,8 +14,10 @@ import restaurantPartnerRouter from "./router/restaurant_partner.js";
 import otpRouter from "./router/otp.js";
 import { initSocket } from "./socket.js";
 
+
+const databaseUrl = process.env.MONGODB_URL || "mongodb://localhost:27017/test";
 mongoose
-  .connect("mongodb://localhost:27017/test")
+  .connect(databaseUrl)
   .then(() => {
     console.log("connection successfull");
   })

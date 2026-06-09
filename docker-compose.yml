@@ -1,0 +1,66 @@
+# FoodWorld full stack: MongoDB + backend API + 4 React frontends.
+#
+#   docker compose up --build
+#
+# Requires server/.env (copy from server/.env.example first).
+# The frontends proxy /api and /socket.io to the "server" service via nginx,
+# so open them directly in the browser:
+#   admin       http://localhost:5001
+#   client      http://localhost:5002
+#   restaurant  http://localhost:5003
+#   delivery    http://localhost:5004
+
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+
+  server:
+    build: ./server
+    restart: unless-stopped
+    env_file:
+      - ./server/.env
+    environment:
+      # Override so the API talks to the mongo service, not localhost.
+      MONGODB_URL: mongodb://mongo:27017/foodworld
+    depends_on:
+      - mongo
+    ports:
+      - "5000:5000"
+
+  admin:
+    build: ./admin
+    restart: unless-stopped
+    depends_on:
+      - server
+    ports:
+      - "5001:80"
+
+  client:
+    build: ./client
+    restart: unless-stopped
+    depends_on:
+      - server
+    ports:
+      - "5002:80"
+
+  restaurant:
+    build: ./restaurant
+    restart: unless-stopped
+    depends_on:
+      - server
+    ports:
+      - "5003:80"
+
+  delivery:
+    build: ./delivery
+    restart: unless-stopped
+    depends_on:
+      - server
+    ports:
+      - "5004:80"
+
+volumes:
+  mongo-data:
